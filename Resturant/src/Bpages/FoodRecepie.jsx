@@ -23,7 +23,6 @@ const FoodRecepie = () => {
 
   return (
     <div>
-      <h1>bvnvbnvbnvb</h1>
       {data && <FoodRecipecard categories={data.categories} />}
 
       {/* {data.map((items) => (

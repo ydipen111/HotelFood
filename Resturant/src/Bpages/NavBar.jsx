@@ -28,6 +28,7 @@ import {
   TagIcon,
   UserGroupIcon,
 } from "@heroicons/react/24/solid";
+import { NavLink, Outlet } from "react-router-dom";
 
 const navListMenuItems = [
   {
@@ -164,7 +165,9 @@ function NavList() {
         color="blue-gray"
         className="font-medium"
       >
-        <ListItem className="flex items-center gap-2 py-2 pr-4">Home</ListItem>
+        <ListItem className="flex items-center gap-2 py-2 pr-4">
+          <NavLink to="/profile">Profile</NavLink>
+        </ListItem>
       </Typography>
       <NavListMenu />
       <Typography
@@ -195,14 +198,26 @@ export function NavbarWithMegaMenu() {
   return (
     <Navbar className="mx-auto max-w-screen-xl px-4 py-2">
       <div className="flex items-center justify-between text-blue-gray-900">
-        <Typography
-          as="a"
-          href="#"
-          variant="h6"
-          className="mr-4 cursor-pointer py-1.5 lg:ml-2"
-        >
-          Material Tailwind
-        </Typography>
+        <NavLink to="/home-page">
+          <Typography
+            as="a"
+            href="#"
+            variant="h6"
+            className="mr-4 cursor-pointer py-1.5 lg:ml-2"
+          >
+            Home
+          </Typography>
+        </NavLink>
+        <NavLink to="/blank">
+          <Typography
+            as="a"
+            href="#"
+            variant="h6"
+            className="mr-4 cursor-pointer py-1.5 lg:ml-2"
+          >
+            FOOD NEPAL
+          </Typography>
+        </NavLink>
         <div className="hidden lg:block">
           <NavList />
         </div>
