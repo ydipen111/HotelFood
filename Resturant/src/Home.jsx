@@ -1,12 +1,19 @@
 import React from 'react';
-import FoodRecipee from './Bpages/FoodRecipecard';
+import { Outlet } from 'react-router';
 import FoodRecepie from './Bpages/FoodRecepie';
+import { BackCard } from './Components/BackCard';
 
 const Home = () => {
   return (
     <div>
       <FoodRecepie />
-      <FoodRecipee />
+      {/* <BackCard />
+      <div className=''>
+
+      </div>
+
+      <Outlet /> */}
+
 
     </div>
   );

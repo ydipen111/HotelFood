@@ -1,0 +1,12 @@
+{data.map((items) => (
+        <div key={items.x} className='space-y-3 mx-auto rounded-sm shadow-2xl px-3 gap-3 py-3'>
+
+            <img src={items.strCategoryThumb} alt={items.strCategoryThumb} />
+
+          <h1 className='text-2xl'>{items.strCategory}</h1>
+          <p>{items.strCategoryDescription}</p>
+
+        </div>
+
+      )
+      )}
