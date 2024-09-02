@@ -8,6 +8,9 @@ import Home from './Home';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Blank from './Blank';
 import FoodRecepie from './Bpages/FoodRecepie';
+import { ProductDetailsCard } from './Bpages/ProductDetailsCard';
+import ItemDetail from './Bpages/Recepie/ItemDetail';
+import ProductDetails from './Bpages/ProductDetails';
 const App = () => {
   const router = createBrowserRouter([{
     path: '/',
@@ -28,6 +31,15 @@ const App = () => {
       {
         path: 'profile',
         element: <FoodRecepie />
+      },
+      {
+        path: 'item/:category',
+        element: <ProductDetails />
+
+      },
+      {
+        path: 'item=detail/:id',
+        element: <ProductDetails />
       },
       {
         path: 'listCard',

@@ -6,17 +6,21 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
+import { useNavigate } from "react-router";
 
 const ProductDataa = ({ categories }) => {
+  const nav = useNavigate()
   return (
-    <div className="grid grid-cols-5 md:grid grid-cols-2">
+    <div className="grid grid-cols-5 msm:grid-cols-3 "
+    >
 
       {categories?.map(({
         idCategory,
         strCategory,
         strCategoryThumb,
         strCategoryDescription }, index) => (
-        <Card className="w-56">
+        <Card className="w-56 "
+          onClick={() => nav(`/item/${strCategory}`)}>
           <CardHeader shadow={false} floated={false} className="h-56 object-contain">
             <img
               src={strCategoryThumb}
