@@ -34,7 +34,7 @@ const ProductDetails = () => {
 
 
   return (
-    <div className='grid grid-cols-4 gap-4 h-[20rem]'>
+    <div className='grid grid-cols-4 mmd:grid-cols-2 gap-4 h-[20rem] px-4 py-4'>
       {product && product.meals?.map((meal) => {
         return <ProductDetailsCard key={meal.idmeal} meal={meal} />
       })}

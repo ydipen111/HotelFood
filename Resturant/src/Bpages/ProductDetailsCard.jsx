@@ -17,7 +17,7 @@ export function ProductDetailsCard({ meal }) {
 
       <Card
         shadow={false}
-        className="grid grid-cols-1 relative  h-[30rem] py-5 
+        className="grid grid-cols-1 relative mmd:h-[20rem] h-[30rem] py-5 
         
         
          items-end justify-center overflow-hidden text-center"
