@@ -9,8 +9,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Blank from './Blank';
 import FoodRecepie from './Bpages/FoodRecepie';
 import { ProductDetailsCard } from './Bpages/ProductDetailsCard';
-import ItemDetail from './Bpages/Recepie/ItemDetail';
 import ProductDetails from './Bpages/ProductDetails';
+import ItemDetail from './Bpages/Recepie/ItemDetail';
 const App = () => {
   const router = createBrowserRouter([{
     path: '/',
@@ -38,9 +38,11 @@ const App = () => {
 
       },
       {
-        path: 'item=detail/:id',
-        element: <ProductDetails />
+        path: 'item-details/:id',
+        element: <ItemDetail />
       },
+      
+
       {
         path: 'listCard',
         element: <EcommerceCard />

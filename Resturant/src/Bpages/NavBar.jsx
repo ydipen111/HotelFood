@@ -196,7 +196,7 @@ export function NavbarWithMegaMenu() {
   }, []);
 
   return (
-    <Navbar className="mx-auto max-w-screen-xl px-4 py-2">
+    <Navbar className="mx-0 w-full bg-blue-500"> {/* Changed from mx-auto to mx-0 and added w-full */}
       <div className="flex items-center justify-between text-blue-gray-900">
         <NavLink to="/home-page">
           <Typography

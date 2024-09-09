@@ -10,11 +10,11 @@ module.exports = withMT({
 
     extend: {
       screens: {
-        'm2xl': { 'max': '1536px' },
-        'mxl': { 'max': '1280px' },
-        'mlg': { 'max': '1024px' },
+        '2xl': { 'max': '1536px' },
+        'xxl': { 'max': '1280px' },
+        'llg': { 'max': '1024px' },
         'mmd': { 'max': '768px' },
-        'msm': { 'max': '640px' },
+        'ssm': { 'max': '640px' },
       },
     },
   },

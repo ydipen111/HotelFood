@@ -34,9 +34,8 @@ const ProductDetails = () => {
 
 
   return (
-    <div>
-      grdgregdrggfdgdfgfdg xdvgsdxdvdsfdvx
-      {product && product.meal?.map((meal) => {
+    <div className='grid grid-cols-4 gap-4 h-[20rem]'>
+      {product && product.meals?.map((meal) => {
         return <ProductDetailsCard key={meal.idmeal} meal={meal} />
       })}
 

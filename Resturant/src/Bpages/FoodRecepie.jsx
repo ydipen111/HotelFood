@@ -22,7 +22,7 @@ const FoodRecepie = () => {
 
 
   return (
-    <div>
+    <div className='grid grid-cols-3'>
       {data && <FoodRecipecard categories={data.categories} />}
 
       {/* {data.map((items) => (

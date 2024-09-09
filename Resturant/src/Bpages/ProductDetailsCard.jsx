@@ -5,20 +5,29 @@ import {
   Typography,
   Avatar,
 } from "@material-tailwind/react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export function ProductDetailsCard({ meal }) {
   return (
-    <Link >
+    <NavLink to={`/item-details/${meal?.idMeal}`}>
+
+      {/* // <NavLink to="/blank">  */}
+
+
+
       <Card
         shadow={false}
-        className="relative grid h-[40rem] w-full max-w-[28rem] items-end justify-center overflow-hidden text-center"
+        className="grid grid-cols-1 relative  h-[30rem] py-5 
+        
+        
+         items-end justify-center overflow-hidden text-center"
       >
         <CardHeader
           floated={false}
           shadow={false}
           color="transparent"
-          className="absolute inset-0 m-0 h-full w-full rounded-none bg-[url('https://images.unsplash.com/photo-1552960562-daf630e9278b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80')] bg-cover bg-center"
+          className="absolute inset-0 m-0 h-full w-full rounded-none object-contain "
+          style={{ backgroundImage: `url(${meal?.strMealThumb})` }}
         >
           <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 via-black/50" />
         </CardHeader>
@@ -27,8 +36,7 @@ export function ProductDetailsCard({ meal }) {
             variant="h2"
             color="white"
             className="mb-6 font-medium leading-[1.5]"
-          >
-            How we design and code open-source projects?
+          >{meal?.strMeal}
           </Typography>
           <Typography variant="h5" className="mb-4 text-gray-400">
             {meal?.strMeal}
@@ -36,7 +44,9 @@ export function ProductDetailsCard({ meal }) {
 
         </CardBody>
       </Card>
-    </Link>
+
+
+    </NavLink>
   );
 }
 

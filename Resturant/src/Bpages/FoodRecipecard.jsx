@@ -7,11 +7,11 @@ const FoodRecipecard = ({ categories }) => {
     <Card className="w-96">
       <CardBody>
 
-        <div className="divide-y divide-gray-200">
+        <div className="divide-y divide-gray-200  cols-4">
           {categories?.map(({ strCategory, strCategoryThumb, strCategoryDescription }, index) => (
             <div onClick={() => nav(`/item/${strCategory}`)}
               key={index}
-              className="flex items-center justify-between pb-3 pt-3 last:pb-0"
+              className="flex items-center justify-between pb-3 pt-3 last:pb-0 "
             >
               <div className="flex items-start gap-x-6">
                 <Avatar size="lg" src={strCategoryThumb} alt={strCategoryThumb} />
